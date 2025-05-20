@@ -16,7 +16,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "nome", unique=true)
+    @Column(name = "nome", unique=true, nullable=false)
     private String nome;
 
     @ManyToOne

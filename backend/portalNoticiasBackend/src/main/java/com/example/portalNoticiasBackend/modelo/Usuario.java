@@ -8,7 +8,6 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 public class Usuario extends Pessoa {
     private String login;
     private String senha;
-
     /**
      * @return String return the login
      */
