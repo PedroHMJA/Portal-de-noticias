@@ -8,8 +8,6 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 public class Autor extends Pessoa {
     private String biografia;
 
-    public Autor(){}
-
     public String getBiografia() {
         return biografia;
     }
