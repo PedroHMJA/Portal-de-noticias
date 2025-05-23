@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.portalNoticiasBackend.modelo.Pessoa;
 import com.example.portalNoticiasBackend.service.PessoaService;
-
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 
@@ -20,9 +20,19 @@ public class PessoaController {
     @Autowired
     PessoaService pessoaService;
 
+    public PessoaController(PessoaService pessoaService){
+        this.pessoaService = pessoaService;
+    }
+
     @GetMapping("/buscar/{id}")
     public Pessoa buscarPessoa(@PathVariable Long id){
         return this.pessoaService.buscarPessoaId(id);
     }
+
+    @PostMapping("/inserirPessoa/")
+    public void inserirPessoa(@RequestBody Pessoa pessoa) {
+        this.pessoaService.salvarPessoa(pessoa);
+    }
+    
     
 }
