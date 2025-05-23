@@ -7,12 +7,10 @@ import org.springframework.stereotype.Component;
 import com.example.portalNoticiasBackend.modelo.Autor;
 import com.example.portalNoticiasBackend.modelo.Categoria;
 import com.example.portalNoticiasBackend.modelo.Noticia;
-import com.example.portalNoticiasBackend.modelo.Pessoa;
 import com.example.portalNoticiasBackend.modelo.Usuario;
 import com.example.portalNoticiasBackend.repository.AutorRepository;
 import com.example.portalNoticiasBackend.repository.CategoriaRepository;
 import com.example.portalNoticiasBackend.repository.NoticiaRepository;
-import com.example.portalNoticiasBackend.repository.PessoaRepository;
 import com.example.portalNoticiasBackend.repository.UsuarioRepository;
 
 
@@ -31,14 +29,11 @@ public class DataFixture implements CommandLineRunner {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    @Autowired
-    private PessoaRepository pessoaRepository;
 
 
 
     @Override
     public void run(String... args) throws Exception {
-        Pessoa pessoa = new Pessoa();
         Usuario usuario = new Usuario();
         Usuario usuario2 = new Usuario();
         Autor autor = new Autor();
